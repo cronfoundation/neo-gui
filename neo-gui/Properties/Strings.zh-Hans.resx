@@ -121,7 +121,7 @@
     <value>关于</value>
   </data>
   <data name="AboutMessage" xml:space="preserve">
-    <value>NEO</value>
+    <value>CRON</value>
   </data>
   <data name="AboutVersion" xml:space="preserve">
     <value>版本：</value>

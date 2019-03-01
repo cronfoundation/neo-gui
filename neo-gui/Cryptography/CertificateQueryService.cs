@@ -69,7 +69,7 @@ namespace Neo.Cryptography
             }
             else
             {
-                string url = $"http://cert.onchain.com/antshares/{address}.cer";
+                string url = $"";
                 WebClient web = new WebClient();
                 web.DownloadDataCompleted += Web_DownloadDataCompleted;
                 web.DownloadDataAsync(new Uri(url), hash);

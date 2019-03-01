@@ -143,7 +143,7 @@ namespace Neo.UI
             ApplicationEngine engine = ApplicationEngine.Run(tx.Script, tx, testMode: true);
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"VM State: {engine.State}");
-            sb.AppendLine($"Gas Consumed: {engine.GasConsumed}");
+            sb.AppendLine($"Cron Consumed: {engine.GasConsumed}");
             sb.AppendLine($"Evaluation Stack: {new JArray(engine.ResultStack.Select(p => p.ToParameter().ToJson()))}");
             textBox7.Text = sb.ToString();
             if (!engine.State.HasFlag(VMState.FAULT))
@@ -152,7 +152,7 @@ namespace Neo.UI
                 if (tx.Gas < Fixed8.Zero) tx.Gas = Fixed8.Zero;
                 tx.Gas = tx.Gas.Ceiling();
                 Fixed8 fee = tx.Gas.Equals(Fixed8.Zero) ? net_fee : tx.Gas;
-                label7.Text = fee + " gas";
+                label7.Text = fee + " cron";
                 button3.Enabled = true;
             }
             else

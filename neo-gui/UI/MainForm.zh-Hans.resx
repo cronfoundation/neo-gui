@@ -191,7 +191,7 @@
     <value>172, 22</value>
   </data>
   <data name="提取小蚁币CToolStripMenuItem.Text" xml:space="preserve">
-    <value>提取NeoGas(&amp;A)...</value>
+    <value>提取CRON(&amp;A)...</value>
   </data>
   <data name="toolStripSeparator7.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 6</value>

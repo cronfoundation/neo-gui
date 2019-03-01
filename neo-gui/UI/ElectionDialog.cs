@@ -59,7 +59,7 @@ namespace Neo.UI
                         }
                     }
                 };
-                label3.Text = $"{tx.SystemFee} gas";
+                label3.Text = $"{tx.SystemFee} cron";
             }
         }
     }
