@@ -1,0 +1,18 @@
+﻿{
+  "ApplicationConfiguration": {
+    "Paths": {
+      "Chain": "Chain_{0}",
+      "Index": "Index_{0}",
+      "CertCache": "Certs"
+    },
+    "P2P": {
+      "Port": 10333,
+      "WsPort": 10334
+    },
+    "Urls": {
+      "AddressUrl": "https://cron.global/api/main_net/v1/get_address_abstracts/{0}",
+      "AssetUrl": "https://cron.global/api/main_net/v1/get_asset/{0}",
+      "TransactionUrl": "https://cron.global/api/main_net/v1/get_transaction/{0}"
+    }
+  }
+}

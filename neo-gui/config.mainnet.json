@@ -10,9 +10,9 @@
       "WsPort": 10334
     },
     "Urls": {
-      "AddressUrl": "https://cron.global/api/main_net/v1/get_address_abstracts/{0}",
-      "AssetUrl": "https://cron.global/api/main_net/v1/get_asset/{0}",
-      "TransactionUrl": "https://cron.global/api/main_net/v1/get_transaction/{0}"
+      "AddressUrl": "https://neoscan.io/address/{0}",
+      "AssetUrl": "https://neoscan.io/api/main_net/v1/get_asset/{0}",
+      "TransactionUrl": "https://neoscan.io/transaction/{0}"
     }
   }
 }

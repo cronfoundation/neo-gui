@@ -1,0 +1,5 @@
+System.BadImageFormatException
+An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+   at Neo.IO.Data.LevelDB.Native.leveldb_options_create()
+   at Neo.Persistence.LevelDB.LevelDBStore..ctor(String path)
+   at Neo.Program.Main()
