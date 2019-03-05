@@ -946,7 +946,7 @@ namespace Neo.UI
             }).ToArray();
             if (delete.Length == 0) return;
             if (MessageBox.Show($"{Strings.DeleteAssetConfirmationMessage}\n"
-                + string.Join("\n", delete.Select(p => $"{p.Asset.GetName()}:{p.Value}"))
+                + string.Join("\n", delete.Select(p => $"{Helper.CustomGetAssetName(p.Asset)}:{p.Value}"))
                 , Strings.DeleteConfirmation, MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) != DialogResult.Yes)
                 return;
             ContractTransaction tx = Program.CurrentWallet.MakeTransaction(new ContractTransaction

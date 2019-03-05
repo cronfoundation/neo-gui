@@ -1,16 +1,46 @@
 ﻿using Akka.Actor;
+using Neo.Ledger;
 using Neo.Network.P2P;
 using Neo.Network.P2P.Payloads;
 using Neo.Properties;
 using Neo.SmartContract;
+using Neo.Wallets;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Neo.UI
 {
     internal static class Helper
     {
+        public static AssetDescriptor CustomAssetDescriptor(UInt256 asset_id)
+        {
+            AssetDescriptor desc = new AssetDescriptor(asset_id);
+            if (desc != null)
+            {
+                if (desc.AssetName == "NEO")
+                    desc.AssetName = "CRONIUM";
+                if (desc.AssetName == "NeoGas")
+                    desc.AssetName = "CRON";
+
+            }
+            return desc;
+        }
+        public static string CustomGetAssetName(AssetState state,CultureInfo culture = null)
+        {
+            string name = state.GetName();
+
+            if (name != null)
+            {
+                if (name == "NEO")
+                    name = "CRONIUM";
+                if (name == "NeoGas")
+                    name = "CRON";
+
+            }
+            return name;
+        }
         private static Dictionary<Type, Form> tool_forms = new Dictionary<Type, Form>();
 
         private static void Helper_FormClosing(object sender, FormClosingEventArgs e)

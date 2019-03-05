@@ -71,7 +71,7 @@ namespace Neo.UI
                 AssetState asset = cache.TryGet(output.AssetId);
                 listBox1.Items.Add(new TxOutListBoxItem
                 {
-                    AssetName = $"{asset.GetName()} ({asset.Owner})",
+                    AssetName = $"{Helper.CustomGetAssetName(asset)} ({asset.Owner})",
                     AssetId = output.AssetId,
                     Value = new BigDecimal(output.Value.GetData(), 8),
                     ScriptHash = output.ScriptHash

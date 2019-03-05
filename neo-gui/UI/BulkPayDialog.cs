@@ -15,7 +15,7 @@ namespace Neo.UI
             {
                 foreach (UInt256 asset_id in Program.CurrentWallet.FindUnspentCoins().Select(p => p.Output.AssetId).Distinct())
                 {
-                    comboBox1.Items.Add(new AssetDescriptor(asset_id));
+                    comboBox1.Items.Add(Helper.CustomAssetDescriptor(asset_id));
                 }
                 foreach (string s in Settings.Default.NEP5Watched)
                 {
@@ -46,7 +46,7 @@ namespace Neo.UI
                 string[] line = p.Split(new[] { ' ', '\t', ',' }, StringSplitOptions.RemoveEmptyEntries);
                 return new TxOutListBoxItem
                 {
-                    AssetName = asset.AssetName,
+                    AssetName = asset.AssetName == "NEO" ? "CRONIUM" : asset.AssetName == "NeoGas" ? "CRON" : asset.AssetName,
                     AssetId = asset.AssetId,
                     Value = BigDecimal.Parse(line[1], asset.Decimals),
                     ScriptHash = line[0].ToScriptHash()
