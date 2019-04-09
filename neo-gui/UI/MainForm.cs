@@ -363,7 +363,8 @@ namespace Neo.UI
                         }
                         else
                         {
-                            result = CertificateQueryService.Query(asset.Owner);
+                            //result = CertificateQueryService.Query(asset.Owner);
+                            result = new CertificateQueryResult() {Type=CertificateQueryResultType.Missing };
                         }
                         using (result)
                         {
